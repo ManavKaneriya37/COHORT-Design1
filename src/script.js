@@ -526,7 +526,6 @@ function marqueeeAnimation() {
 
   marquee.addEventListener("mouseenter", () => {
     isInsideMarquee = true;
-    console.log("Mouse entered marquee");
     gsap.to('.marquee-wrapper .dotter', {
       x: mouseX,
       y: mouseY,
@@ -595,9 +594,6 @@ function page5Animation() {
   type: "x,y",
   bounds: document.querySelector(".page5"),
   inertia: true,
-  onClick: function () {
-    console.log("clicked");
-  },
   onDragEnd: function (e) {
     let x = e.target._gsTransform.x;
     let y = e.target._gsTransform.y;
