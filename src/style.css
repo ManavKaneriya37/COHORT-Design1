@@ -733,8 +733,9 @@ footer .content img {
     } 
     .heroContent .heroHead {
         font-size: 3rem;
-        word-wrap: break-word;
-        width: 85%;
+        overflow-wrap: anywhere;
+        /* min-width: 75%; */
+        width: 19rem;
         line-height: 1.2;
     }
     .heroContent p {
