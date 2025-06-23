@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText, Draggable);
 
 // Enable mobile support explicitly
 ScrollTrigger.defaults({
@@ -10,7 +10,7 @@ ScrollTrigger.defaults({
 
 
 window.addEventListener("load", () => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, SplitText, Draggable);
   ScrollTrigger.refresh();
 
 });
