@@ -744,11 +744,11 @@ footer .content img {
         padding-right: 0.75rem;
         width: 100%;
     }
-    .loginBtn {
-        font-size: 0.4rem;
+    nav .loginBtn,nav .fundingBtn {
+        font-size: 0.7rem;
     }
     .heroContent .heroFundingBtn {
-        font-size: 0.4rem;
+        font-size: 0.9rem;
     }
     .page2 div {
         width: 90%;
