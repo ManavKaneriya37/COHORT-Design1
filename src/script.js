@@ -9,10 +9,14 @@ ScrollTrigger.defaults({
 });
 
 window.addEventListener("load", () => {
+  gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
+
 });
 window.addEventListener("resize", () => {
+  gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
+  
 });
 
 
