@@ -90,6 +90,7 @@ function navbarAnimation() {
       y: 0,
       opacity: 1,
       duration: 1,
+      delay: 0.5,
       scrub: 1,
       stagger: {
         amount: 0.3,
@@ -119,6 +120,7 @@ function navbarAnimation() {
       opacity: 1,
       y: -20,
       duration: 4,
+      delay: 0.5,
       ease: "bounce.inOut",
       delay: index * 0.05,
     });
@@ -134,6 +136,7 @@ function navbarAnimation() {
       y: 0,
       opacity: 1,
       duration: 2,
+      delay: 0.5,
       scrub: 1,
       stagger: {
         amount: 0.5,
@@ -151,6 +154,7 @@ function navbarAnimation() {
       scale: 1,
       opacity: 1,
       scrub: true,
+      delay: 0.5,
       ease: "power4.inOut",
       duration: 0.6,
     }
