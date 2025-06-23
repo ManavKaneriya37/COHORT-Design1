@@ -10,12 +10,10 @@ ScrollTrigger.defaults({
 
 
 window.addEventListener("load", () => {
-  gsap.registerPlugin(ScrollTrigger, SplitText, Draggable);
   ScrollTrigger.refresh();
 
 });
 window.addEventListener("resize", () => {
-  gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
   
 });
@@ -35,6 +33,29 @@ const lenis = new Lenis({
   normalizeWheel: true, // normalize for different devices
   infinite: false // keep false unless you want infinite loop scroll
 })
+
+  // Tell ScrollTrigger to use Lenis's container
+  ScrollTrigger.scrollerProxy(".container", {
+    scrollTop(value) {
+      if (arguments.length) {
+        lenis.scrollTo(value);
+      }
+      return lenis.scroll;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    },
+    // Optional: pinType for fixed elements
+    pinType: document.querySelector(".container").style.transform ? "transform" : "fixed"
+  });
+
+  // Update ScrollTrigger on Lenis scroll
+  lenis.on("scroll", ScrollTrigger.update);
 
   // Animate the scroll with requestAnimationFrame
   function raf(time) {
