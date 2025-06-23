@@ -8,6 +8,7 @@ ScrollTrigger.defaults({
   invalidateOnRefresh: true,
 });
 
+
 window.addEventListener("load", () => {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
